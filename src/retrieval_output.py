@@ -1,17 +1,14 @@
-# PROGRAM K01-GeprekMumbul-F08
+# PROGRAM K01-MIF2123-F08
 
 # IDENTITAS
-# Kelompok     : 01 - Geprek Mumbul
-# NIM/Nama - 1 : 13523021 - Muhammad Raihan Nazhim Oktana
-# NIM/Nama - 2 : 13523044 - Muhammad Luqman Hakim
-# NIM/Nama - 3 : 13523092 - Muhammad Izzat Jundy
-# Instansi     : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
-# Jurusan      : Teknik Informatika (IF)
-# Nama File    : retrival_output.py
-# Topik        : Tugas Besar 2 Aljabar Linier dan Geometri 2024 (IF2123-24)
-# Tanggal      : Senin, 16 Desember 2024
-# Deskripsi    : Subprogram F08 - Retrival & Output
-# PJ F08       : 13523021 - Muhammad Raihan Nazhim Oktana
+# Nama      : Muhammad Raihan Nazhim Oktana
+# NIM       : 13523021
+# Instansi  : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
+# Jurusan   : Teknik Informatika (IF)
+# Nama File : retrival_output.py
+# Topik     : Makalah Aljabar Linier dan Geometri 2024 (IF2123-24)
+# Tanggal   : Kamis, 2 Januari 2025
+# Deskripsi : Subprogram F08 - Retrival Output
 
 # KAMUS
 # picture_index : function
@@ -19,9 +16,6 @@
 
 # ALGORITMA
 import os
-import librosa
-import librosa.display
-import matplotlib.pyplot as plt
 from PIL import Image
 from similarity_computation import *
 
@@ -44,7 +38,7 @@ def picture_index(folder_path : str , index : int) -> tuple[str , str] :
     path = os.path.join(folder_path , name)
     return (path , name)
 
-def information_retrival(query : list[float] , matrix : list[list[float]] , type : str , database : str , audio_type : str) -> None :
+def information_retrival(query : list[float] , matrix : list[list[float]] , database : str) -> None :
     # DESKRIPSI LOKAL
     # Fungsi untuk melakukan proses pencarian informasi dan melempar ke tipe fungsi output yang bersesuaian.
 
@@ -52,20 +46,19 @@ def information_retrival(query : list[float] , matrix : list[list[float]] , type
     # query , percent : list of float
     # matrix : matrix of float
     # data : list of tuple of integer and float
-    # type , database , audio_type : string
+    # database : string
 
     # ALGORITMA LOKAL
     (data , percent) = jarak_euclidean(query , matrix)
-    audio_type = "Waveform"
-    return display_output(data , percent , type , database , audio_type)
+    return display_output(data , percent , database)
 
-def array_names_percents(data : list[tuple[int , float]] , percent : list[float] , type : str , database : str) -> list[tuple[str , float]] :
+def array_names_percents(data : list[tuple[int , float]] , percent : list[float] , database : str) -> list[tuple[str , float]] :
     # DESKRIPSI LOKAL
     # Fungsi untuk mengembalikan kumpulan nama file hasil pencarian yang telah terurut.
 
     # KAMUS LOKAL
     # data : list of tuple of integer and float
-    # type , database , name : string
+    # database , name : string
     # percent : list of float
     # res : list of tuple of string and float
     # size : integer
@@ -80,14 +73,14 @@ def array_names_percents(data : list[tuple[int , float]] , percent : list[float]
         res[i][1] = percent[i]
     return res
 
-def display_output(data : list[tuple[int , float]] , percent : list[float] , type : str , database : str , audio_type : str) -> None :
+def display_output(data : list[tuple[int , float]] , percent : list[float] , database : str) -> None :
     # DESKRIPSI LOKAL
     # Fungsi untuk menampilkan output berupa urutan hasil query yang tepat ke layar.
 
     # KAMUS LOKAL
     # data : list of tuple of integer and float
     # percent : list of float
-    # type , database , path , name , audio_type : string
+    # database , path , name : string
 
     # ALGORITMA LOKAL
     if (len(data) > 0) :

@@ -1,17 +1,14 @@
-# PROGRAM K01-GeprekMumbul-F04
+# PROGRAM K01-MIF2123-F05
 
 # IDENTITAS
-# Kelompok     : 01 - Geprek Mumbul
-# NIM/Nama - 1 : 13523021 - Muhammad Raihan Nazhim Oktana
-# NIM/Nama - 2 : 13523044 - Muhammad Luqman Hakim
-# NIM/Nama - 3 : 13523092 - Muhammad Izzat Jundy
-# Instansi     : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
-# Jurusan      : Teknik Informatika (IF)
-# Nama File    : pca_computation.py
-# Topik        : Tugas Besar 2 Aljabar Linier dan Geometri 2024 (IF2123-24)
-# Tanggal      : Kamis, 12 Desember 2024
-# Deskripsi    : Subprogram F04 - PCA Computation
-# PJ F04       : 13523021 - Muhammad Raihan Nazhim Oktana
+# Nama      : Muhammad Raihan Nazhim Oktana
+# NIM       : 13523021
+# Instansi  : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
+# Jurusan   : Teknik Informatika (IF)
+# Nama File : data_centering.py
+# Topik     : Makalah Aljabar Linier dan Geometri 2024 (IF2123-24)
+# Tanggal   : Kamis, 2 Januari 2025
+# Deskripsi : Subprogram F05 - PCA Computation
 
 # KAMUS
 # transpose , multiply , svd_decomposition : function
@@ -19,7 +16,6 @@
 
 # ALGORITMA
 import numpy as np
-from math import log2
 from data_centering import *
 
 def transpose(matrix : list[list[float]]) -> list[list[float]] :
@@ -105,7 +101,7 @@ def get_keigen(matrix : list[list[float]]) -> list[list[float]] :
     matrix = data_centering(matrix)
     covarians = make_covarians(matrix)
     (eigen_vector , _ , _) = svd_decomposition(covarians)
-    k = int(log2(len(matrix)))
+    k = np.linalg.matrix_rank(np.array(matrix))
     size = len(eigen_vector)
     k_eigen_vector = [[0.0 for j in range (k)] for i in range (size)]
     for i in range (size) :

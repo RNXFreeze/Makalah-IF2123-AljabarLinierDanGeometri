@@ -1,4 +1,4 @@
-# PROGRAM K01-MIF2123-F01
+# PROGRAM K01-MIF2123-F04
 
 # IDENTITAS
 # Nama      : Muhammad Raihan Nazhim Oktana
@@ -7,8 +7,8 @@
 # Jurusan   : Teknik Informatika (IF)
 # Nama File : data_centering.py
 # Topik     : Makalah Aljabar Linier dan Geometri 2024 (IF2123-24)
-# Tanggal   : Rabu, 1 Januari 2025
-# Deskripsi : Subprogram F02 - Data Centering
+# Tanggal   : Kamis, 2 Januari 2025
+# Deskripsi : Subprogram F04 - Data Centering
 
 # KAMUS
 # find_average : function

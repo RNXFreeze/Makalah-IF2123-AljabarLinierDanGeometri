@@ -1,17 +1,14 @@
-# PROGRAM K01-GeprekMumbul-F05
+# PROGRAM K01-MIF2123-F07
 
 # IDENTITAS
-# Kelompok     : 01 - Geprek Mumbul
-# NIM/Nama - 1 : 13523021 - Muhammad Raihan Nazhim Oktana
-# NIM/Nama - 2 : 13523044 - Muhammad Luqman Hakim
-# NIM/Nama - 3 : 13523092 - Muhammad Izzat Jundy
-# Instansi     : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
-# Jurusan      : Teknik Informatika (IF)
-# Nama File    : similarity_computation.py
-# Topik        : Makalah Aljabar Linier dan Geometri 2024 (IF2123-24)
-# Tanggal      : Senin, 16 Desember 2024
-# Deskripsi    : Subprogram F05 - Similarity Computation
-# PJ F05       : 13523021 - Muhammad Raihan Nazhim Oktana
+# Nama      : Muhammad Raihan Nazhim Oktana
+# NIM       : 13523021
+# Instansi  : Sekolah Teknik Elektro dan Informatika (STEI) Institut Teknologi Bandung (ITB)
+# Jurusan   : Teknik Informatika (IF)
+# Nama File : similarity_computation.py
+# Topik     : Makalah Aljabar Linier dan Geometri 2024 (IF2123-24)
+# Tanggal   : Kamis, 2 Januari 2025
+# Deskripsi : Subprogram F07 - Similarity Computation
 
 # KAMUS
 # proyeksi_query , count_function , jarak_euclidean : function
