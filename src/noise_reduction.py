@@ -30,14 +30,13 @@ def reduksi_noise(image) :
     # ALGORITMA LOKAL
     image_float = image.astype(float)
     U , S , VT = np.linalg.svd(image_float , full_matrices = False)
-    k = 10
+    k = 30
     S_k = np.zeros_like(S)
     S_k[:k] = S[:k]
     S_k_matrix = np.diag(S_k)
     denoised_image = U @ S_k_matrix @ VT
-    denoised_image = np.clip(denoised_image , 0 , 31)
+    denoised_image = np.clip(denoised_image , 0 , 255)
     denoised_image = denoised_image.astype(np.uint8)
-
     return denoised_image
 
 def rekonstruksi_citra(path : str) :
